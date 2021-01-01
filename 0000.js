@@ -1,3 +1,1 @@
-hihihihihihihih
-ohohohohohoh
-heyheyheyheyhey
+console.log(hihihihihihihihohohohohohohheyheyheyheyhey) 
