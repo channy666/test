@@ -1,0 +1,55 @@
+<script>
+debugger
+solve(['3', '2 5', '4 6', '1 1'])
+
+
+function solve(lines) {
+  //let min = countDistence(lines[1].split(' '), lines[2].split(' '))
+  let do11 = lines[1].split(' ')
+  let dot2 = lines[2].split(' ')
+  console.log(lines[1].split(' '))
+}
+
+  /*for (let i = 1; i < lines.length - 1; i++) {
+    let A = lines[i].split(' ')
+    for (let x = i + 1; x < lines.length; x++) {
+      let B = lines[x].split(' ')
+      if (countDistence(A, B) < min) {
+        let min = countDistance(A, B)
+        let dot1 = A
+        let dot2 = B 
+      }
+    }
+  }
+  if (Number(dot1[0]) > Number(dot2[0])) {
+    console.log(dot1.join(' '))
+    console.log(B.join(' '))
+  } else if (Number(dot1[0]) < Number(dot2[0])) {
+    console.log(dot2.join(' '))
+    console.log(dot1.join(' '))
+  } else {
+    if (Number(dot1[1]) > Number(dot2[1])) {
+      console.log(dot1.join(' '))
+      console.log(dot2.join(' '))
+    }
+    console.log(dot2.join(' '))
+    console.log(dot1.join(' '))
+  }
+}
+*/
+
+
+
+function countDistence (x, y) {
+  let x1 = Number(x[0])
+  let x2 = Number(x[1])
+  let y1 = Number(y[0])
+  let y2 = Number(y[1])
+  let distenceX = (x1 - y1) * (x1 - y1)
+  let distenceY = (x2 - y2) * (x2 - y2)
+  return Math.sqrt(distenceX + distenceY)
+}
+
+
+
+</script>
