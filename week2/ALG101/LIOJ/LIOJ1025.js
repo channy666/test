@@ -30,9 +30,40 @@ function flower (n) {
     var str = n.toString()
     var num = 0
     for (var i = 0; i < str.length; i++) {
-        num += Number(str[i])**str.length
+        num += Number(str[i]) ** str.length
     }
     if (num === Number(n)) {
         console.log(Number(n))
     }
+}
+
+
+//數學算法～～～
+
+function solve(lines) {
+  let arr = lines[0].split(' ')
+  for (let i = Number(arr[0]); i <= Number(arr[1]); i++) {
+   isNarcissisticNumber(i, digitsCount(i))
+  }
+}
+
+function digitsCount (n) {
+  let result = 0
+  while (n != 0) {
+    n = Math.floor(n / 10)
+    result++
+  }
+  return result
+}
+
+function isNarcissisticNumber (num, digits) {
+  let n = num
+  let sum = 0
+  while (n != 0) {
+    sum += (n % 10) ** digits
+    n = Math.floor(n / 10)
+  }
+  if (sum === num) {
+    console.log(num)
+  }
 }
